@@ -29,7 +29,7 @@ const rl = readline.createInterface({
 });
 
 rl.question("Digite o número para ser calculado seu fatorial: ", (num) => {
-    const numero = parseFloat(num);
+    const numero = parseInt(num);
     
         if (isNaN(num)) {
             console.log(`${num} não é um número!`);
