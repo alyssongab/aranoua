@@ -31,12 +31,16 @@ const rl = readline.createInterface({
 rl.question("Digite o número para ser calculado seu fatorial: ", (num) => {
     const numero = parseFloat(num);
     
-    if (numero < 0) {
-        console.log(fatorial(numero));
+        if (isNaN(num)) {
+            console.log(`${num} não é um número!`);
+        
+        } else if (numero < 0) {
+            console.log(fatorial(numero));
+        
+        } else {
+            const result = fatorial(numero);
+            console.log(`O fatorial de ${num} é ${result}`);
+        }
     
-    }   else{
-        const result = fatorial(numero);
-        console.log(`O fatorial de ${num} é ${result}`);
-    }
     rl.close();
 });
