@@ -1,0 +1,19 @@
+Faça um programa que execute o menu abaixo:
+
+1. Preencher a matriz
+
+2. Exibir a matriz
+
+3. Exibir uma linha específica
+
+4. Exibir uma coluna específica
+
+5. Escrever a diagonal principal
+
+6. Escrever a diagonal inversa
+
+7. sair
+
+opção: 
+
+(matriz 4x4);
