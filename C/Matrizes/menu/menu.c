@@ -12,8 +12,8 @@ void menu () {
 	printf("\n\t2. Exibir a matriz");
 	printf("\n\t3. Exibir uma linha especifica");
 	printf("\n\t4. Exibir uma coluna especifica");
-	printf("\n\t5. Escrever a diagonal principal");
-	printf("\n\t6. Escrever a diagonal inversa");
+	printf("\n\t5. Exibir a diagonal principal");
+	printf("\n\t6. Exibir a diagonal inversa");
 	printf("\n\t0. Sair");
 	printf("\n\tOpcao: ");
 }
