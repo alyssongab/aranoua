@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sistema de cadastro de livros</title>
+</head>
+<body>
+    <div class="titulo">
+        <h1>Sistema de cadastro de livros</h1>
+    </div>
+    <!-- Menu de ações -->
+    <div id="menu">
+        <button id="btn-cadastrar">Cadastrar livro</button>
+        <button id="btn-consultar">Consultar livros</button>
+        <button id="btn-listar">Listar livros</button>
+        <button id="btn-apagar">Apagar livro</button>
+    </div>
+    <!-- Tela (oculta) de cadastrar um livro -->
+    <div id="forms">
+        <div id="form-cadastrar" class="form-container">
+            <h2>Cadastrar livro</h2>
+            <label for="titulo">Titulo:</label>
+            <input type="text" id="titulo">
+            <label for="autor">Autor:</label>
+            <input type="text" id="autor"> <br>
+            <button id="btn-submit-cadastro">Submit</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

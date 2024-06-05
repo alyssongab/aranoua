@@ -1,0 +1,44 @@
+* {
+    font-family: Helvetica, sans-serif;
+}
+
+/* body {
+    background-image: linear-gradient(0deg, rgb(44, 103, 73),white);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 98vh;
+} */
+
+.titulo h1 {
+    color: red;
+    font-size: 30px;
+}
+
+/* .menu h2 {
+    color: #416fde;
+} */
+
+#menu {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.form-container {
+    display: none;
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    padding: 5px;
+    width: 200px;
+    margin-bottom: 10px;
+}
