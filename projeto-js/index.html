@@ -7,27 +7,55 @@
     <title>Sistema de cadastro de livros</title>
 </head>
 <body>
-    <div class="titulo">
-        <h1>Sistema de cadastro de livros</h1>
-    </div>
-    <!-- Menu de ações -->
-    <div id="menu">
-        <button id="btn-cadastrar">Cadastrar livro</button>
-        <button id="btn-consultar">Consultar livros</button>
-        <button id="btn-listar">Listar livros</button>
-        <button id="btn-apagar">Apagar livro</button>
-    </div>
-    <!-- Tela (oculta) de cadastrar um livro -->
-    <div id="forms">
-        <div id="form-cadastrar" class="form-container">
-            <h2>Cadastrar livro</h2>
-            <label for="titulo">Titulo:</label>
-            <input type="text" id="titulo">
-            <label for="autor">Autor:</label>
-            <input type="text" id="autor"> <br>
-            <button id="btn-submit-cadastro">Submit</button>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+     <!-- Título principal da página -->
+     <h1>Sistema de Cadastro de Livros</h1>
+     <!-- Menu de navegação -->
+     <div id="menu">
+        <button id="btn-cadastrar">Cadastrar Livro</button>
+        <button id="btn-consultar">Consultar Livro</button>
+        <button id="btn-listar">Listar Livros</button>
+        <button id="btn-apagar">Apagar Livro(s)</button>
+     </div>
+    
+     <!-- Formulário para cadastrar livros -->
+     <div id="form-cadastrar" class="form-container">
+     <h2>Cadastrar Livro</h2>
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" required><br>
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor"><br>
+        <label for="capa">Capa:</label>
+        <input type="file" id="capa"><br>
+        <button id="btn-submit-cadastrar">Cadastrar</button>
+     </div>
+     
+     <!-- Formulário para consultar livros -->
+     <div id="form-consultar" class="form-container">
+        <h2>Consultar Livro</h2>
+        <label for="consulta-titulo">Título:</label>
+        <input type="text" id="consulta-titulo"><br>
+        <label for="consulta-autor">Autor:</label>
+        <input type="text" id="consulta-autor"><br>
+        <button id="btn-submit-consultar">Consultar</button>
+        <div id="consulta-result"></div>
+     </div>
+    
+     <!-- Container para listar os livros cadastrados -->
+     <div id="list-container" style="display: none;">
+        <h2>Lista de Livros</h2>
+        <ul id="book-list"></ul>
+     </div>
+     
+     <!-- Formulário para apagar livros -->
+     <div id="form-apagar" class="form-container">
+        <h2>Apagar Livro(s)</h2>
+        <ul id="apagar-list"></ul>
+        <label><input type="checkbox" id="select-all"> Selecionar/Deselecionar
+        Todos</label><br>
+        <button id="btn-submit-apagar">Apagar Selecionados</button>
+     </div>
+     
+     <!-- Script JavaScript -->
+     <script src="script.js"></script>
+    </body>
 </html>
