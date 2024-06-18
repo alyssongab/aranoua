@@ -12,14 +12,15 @@ h1 {
     background-color: #333;
     color: white;
     padding: 10px 0;
-    margin: 0 0 20px;
+    margin: 0 0 20px 0;
    }
 
    /* Estiliza o menu de navegação */
 #menu {
     margin-bottom: 20px;
    }
-/* Estiliza os botões do menu */
+
+   /* Estiliza os botões do menu */
 #menu button {
     background-color: #333;
     color: white;
@@ -43,7 +44,7 @@ h1 {
 input[type="text"], input[type="file"] {
     padding: 10px;
     margin: 5px 0;
-    width: 80%; /* Define a largura dos campos */
+    width: 50%; /* Define a largura dos campos */
    }
 
    /* Estiliza o botão de submissão */
