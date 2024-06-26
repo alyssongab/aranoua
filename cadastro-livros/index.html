@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro de Livros</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Sistema de Cadastro de Livros</h1>
+    <div id="menu">
+        <button id="btn-cadastrar">Cadastrar Livro</button>
+        <button id="btn-consultar">Consultar Livro</button>
+        <button id="btn-listar">Listar Livros</button>
+        <button id="btn-apagar">Apagar Livro(s)</button>
+    </div>
+
+    <div id="form-cadastrar" class="form-container">
+        <h2>Cadastrar Livro</h2>
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" required><br>
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor"><br>
+        <label for="capa">Capa:</label>
+        <input type="file" id="capa"><br>
+        <button id="btn-submit-cadastrar">Cadastrar</button>
+    </div>
+
+    <div id="form-consultar" class="form-container">
+        <h2>Consultar Livro</h2>
+        <label for="consulta-titulo">Título:</label>
+        <input type="text" id="consulta-titulo"><br>
+        <label for="consulta-autor">Autor:</label>
+        <input type="text" id="consulta-autor"><br>
+        <button id="btn-submit-consultar">Consultar</button>
+        <div id="consulta-result"></div>
+    </div>
+
+    <div id="list-container" style="display: none;">
+        <h2>Lista de Livros</h2>
+        <ul id="book-list"></ul>
+    </div>
+
+    <div id="form-apagar" class="form-container">
+        <h2>Apagar Livro(s)</h2>
+        <ul id="apagar-list"></ul>
+        <label><input type="checkbox" id="select-all"> Marcar/Desmarcar Todos</label><br>
+        <button id="btn-submit-apagar">Apagar Selecionados</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

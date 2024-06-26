@@ -1,0 +1,99 @@
+/* Define a aparência geral da página */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; /* Centraliza o conteúdo da página */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estiliza o cabeçalho */
+h1 {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    margin: 0 0 20px;
+}
+/* Estiliza o menu de navegação */
+#menu {
+    margin-bottom: 20px;
+}
+
+/* Estiliza os botões do menu */
+#menu button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+#menu button:hover {
+    background-color: #555;
+}
+
+/* Estiliza os campos de entrada de texto */
+input[type="text"], input[type="file"] {
+    padding: 10px;
+    margin: 5px 0;
+    width: 80%; /* Define a largura dos campos */
+}
+
+/* Estiliza o botão de submissão */
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Estiliza a lista de livros */
+#book-list, #apagar-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estiliza os containers de formulário */
+.form-container {
+    display: none; /* Esconde os formulários inicialmente */
+    margin-bottom: 20px;
+}
+
+/* Estiliza os itens da lista */
+#book-list li, #apagar-list li {
+    background-color: white;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Estiliza a capa do livro */
+.book-cover {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Estiliza o container de resultados da consulta */
+#consulta-result div {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+
+/* Centraliza o conteúdo dentro dos containers */
+.form-container, #list-container, #consulta-result {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center; /* Centraliza o texto dentro dos containers */
+}
