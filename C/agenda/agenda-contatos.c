@@ -55,8 +55,9 @@ void cadastrarContato(){
 	else {
 		Contato novoContato; // Variável para cadastrar um novo contato
 		printf("Nome: "); 
-		scanf("%s", novoContato.nome); 
+//		scanf("%s", novoContato.nome); 
 		fflush(stdin);
+		fgets(novoContato.nome, 50, stdin);
 	
 		printf("Celular: "); 
 		scanf("%s", novoContato.celular); 
@@ -83,9 +84,9 @@ void listarContatos() {
 	else {
 		printf("\nLista de contatos\n");
 		for (int i = 0; i < totalContatos; i++) {
-			printf("\nContato %i:", i+1);
+			printf("\nContato %i:\n", i+1);
 			printf("\nNome: %s", agenda[i].nome);
-			printf("\nCelular: %s", agenda[i].celular);
+			printf("Celular: %s", agenda[i].celular);
 			printf("\nEmail: %s", agenda[i].email);
 			printf("\n");
 		} //for
@@ -148,7 +149,8 @@ void removerContato() {
 void easterEgg() {
 	printf("\nSeja bem vindo(a) a agenda jedi)");
 	printf("\nDesenvolvido por: Alysson");
-	printf("\nAgenda de contatos V.1.0");
+	printf("\nAgenda de contatos V.2.0");
+	// Alteração do scanf para fgets no nome (Adicionar contato).
 	printf("\nData: 03.07.2024");
 	printf("\nObrigado(a) por usar nossa agenda!");
 	retornar();
