@@ -1,11 +1,11 @@
-package aula01;
+package aula01.util;
 
 public class IMCUtil {
     static double calcularImc(double peso, double altura) {
         return peso / (altura * altura);
     }
 
-    static void classificarImc(double imc) {
+    public static void classificarImc(double imc) {
 
         String classificacao, dicas;
 

@@ -1,8 +1,8 @@
-package aula01;
+package aula01.testes;
 import java.util.Scanner;
 
-import static aula01.IMCUtil.calcularImc;
-import static aula01.IMCUtil.classificarImc;
+//import static aula01.util.IMCUtil.calcularImc;
+//import static aula01.util.IMCUtil.classificarImc;
 
 public class AtendimentoMedicoComIMC {
 
