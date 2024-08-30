@@ -7,6 +7,28 @@ public class Pessoa {
     private double altura;
     private String cidade;
 
+//    public Pessoa(String nome, double peso, double altura, String cidade) {
+//        this.nome = nome;
+//        this.peso = peso;
+//        this.altura = altura;
+//        this.cidade = cidade;
+//    }
+
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+
+    public Pessoa(String nome, double peso) {
+        this.nome = nome;
+        this.peso = peso;
+    }
+
+    public Pessoa(String nome, double peso, double altura) {
+        this.nome = nome;
+        this.peso = peso;
+        this.altura = altura;
+    }
+
     public Pessoa(String nome, double peso, double altura, String cidade) {
         this.nome = nome;
         this.peso = peso;

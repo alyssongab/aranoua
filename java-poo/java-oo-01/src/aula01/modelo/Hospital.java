@@ -17,6 +17,24 @@ public class Hospital {
         this.email = email;
     }
 
+//    public Hospital(String nome, String endereco) {
+//        this.nome = nome;
+//        this.endereco = endereco;
+//    }
+//
+//    public Hospital(String nome, String endereco, String telefone) {
+//        this.nome = nome;
+//        this.endereco = endereco;
+//        this.telefone = telefone;
+//    }
+//
+//    public Hospital(String nome, String endereco, String telefone, String site) {
+//        this.nome = nome;
+//        this.endereco = endereco;
+//        this.telefone = telefone;
+//        this.site = site;
+//    }
+
     public String getNome() {
         return nome;
     }
