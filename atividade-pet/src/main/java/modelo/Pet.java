@@ -1,7 +1,9 @@
+package main.java.modelo;
+
 public class Pet {
     // atributos
     private String nome;
-    private String proprietario;
+    private Proprietario proprietario;
     private int anoNascimento;
     private String especie;
     private String raca;
@@ -15,11 +17,11 @@ public class Pet {
         this.nome = nome;
     }
 
-    public String getProprietario() {
+    public Proprietario getProprietario() {
         return proprietario;
     }
 
-    public void setProprietario(String proprietario) {
+    public void setProprietario(Proprietario proprietario) {
         this.proprietario = proprietario;
     }
 
@@ -48,15 +50,14 @@ public class Pet {
     }
 
     // Calcular a idade
-    public void getIdade() {
-        int idade = (2024 - this.anoNascimento);
-        System.out.println(idade);
+    public int getIdade() {
+        return (2024 - this.anoNascimento);
     }
 
     // Construtores
     public Pet() {
         this.nome = "Desconhecido";
-        this.proprietario = "Desconhecido";
+        this.proprietario = null;
         this.anoNascimento = 0;
         this.especie = "Desconhecido";
         this.raca = "Desconhecido";
@@ -66,29 +67,43 @@ public class Pet {
         this.nome = nome;
     }
 
-    public Pet(String nome, String proprietario) {
+    public Pet(String nome, Proprietario proprietario) {
         this.nome = nome;
         this.proprietario = proprietario;
     }
 
-    public Pet(String nome, String proprietario, int anoNascimento) {
+    public Pet(String nome, Proprietario proprietario, int anoNascimento) {
         this.nome = nome;
         this.proprietario = proprietario;
         this.anoNascimento = anoNascimento;
     }
 
-    public Pet(String nome, String proprietario, int anoNascimento, String especie) {
+    public Pet(String nome, Proprietario proprietario, int anoNascimento, String especie) {
         this.nome = nome;
         this.proprietario = proprietario;
         this.anoNascimento = anoNascimento;
         this.especie = especie;
     }
 
-    public Pet(String nome, String proprietario, int anoNascimento, String especie, String raca) {
+    public Pet(String nome, Proprietario proprietario, int anoNascimento, String especie, String raca) {
         this.nome = nome;
         this.proprietario = proprietario;
         this.anoNascimento = anoNascimento;
         this.especie = especie;
         this.raca = raca;
+    }
+
+    @Override
+    public String toString() {
+        
+        return "\nPet{" +
+                "nome='" + nome + '\'' +
+                ", proprietario=" + proprietario.getNome() +
+                ", telefone=" + proprietario.getTelefone() +
+                ", email=" + proprietario.getEmail() +
+                ", anoNascimento=" + anoNascimento +
+                ", especie='" + especie + '\'' +
+                ", raca='" + raca + '\'' +
+                '}';
     }
 }
