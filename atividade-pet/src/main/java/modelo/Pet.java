@@ -95,12 +95,15 @@ public class Pet {
 
     @Override
     public String toString() {
-        
+        String proprietarioInfo = (proprietario != null)
+                ? "proprietario=" + proprietario.getNome() +
+                ", telefone=" + proprietario.getTelefone() +
+                ", email=" + proprietario.getEmail()
+                : "proprietario=Desconhecido";
+
         return "\nPet{" +
                 "nome='" + nome + '\'' +
-                ", proprietario=" + proprietario.getNome() +
-                ", telefone=" + proprietario.getTelefone() +
-                ", email=" + proprietario.getEmail() +
+                ", " + proprietarioInfo +
                 ", anoNascimento=" + anoNascimento +
                 ", especie='" + especie + '\'' +
                 ", raca='" + raca + '\'' +

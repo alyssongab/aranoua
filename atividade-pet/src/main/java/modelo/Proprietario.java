@@ -1,11 +1,13 @@
 package main.java.modelo;
 
+import java.util.ArrayList;
+
 public class Proprietario {
     //Atributos
     private String nome;
     private String telefone;
     private String email;
-    private Pet[] pets = new Pet[10];
+    private ArrayList<Pet> pets = new ArrayList<>();
 
     // Getters Setters
     public String getNome() {
@@ -32,11 +34,11 @@ public class Proprietario {
         this.email = email;
     }
 
-    public Pet[] getPets() {
+    public ArrayList<Pet> getPets() {
         return pets;
     }
 
-    public void setPets(Pet[] pets) {
+    public void setPets(ArrayList<Pet> pets) {
         this.pets = pets;
     }
 
