@@ -34,12 +34,19 @@ public class Proprietario {
         this.email = email;
     }
 
-    public ArrayList<Pet> getPets() {
-        return pets;
+    // MÉTODOS ESPECIAIS
+
+    public void addPet(Pet pet) {
+        if(!pets.contains(pet)) {
+            pets.add(pet);
+            pet.setProprietario(this);
+        }
     }
 
-    public void setPets(ArrayList<Pet> pets) {
-        this.pets = pets;
+    public void listarPets() {
+        for (Pet p : pets) {
+            System.out.println(p);
+        }
     }
 
     // Construtor

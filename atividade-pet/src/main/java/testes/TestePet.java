@@ -31,7 +31,7 @@ public class TestePet {
 
     // *********************************************************
 
-    public static void testaProprietarioParaPets(){
+    public static void testaProprietarioParaPets() {
         // novo proprietario com parametros do construtor
         Proprietario prop = new Proprietario();
         prop.setNome("Alysson");
@@ -44,7 +44,7 @@ public class TestePet {
         pet.setRaca("srd");
         pet.setAnoNascimento(2020);
 
-        prop.getPets().add(pet);
+        prop.addPet(pet);
 
         pet = new Pet(); // Desreferenciando o primeiro pet criado
 
@@ -53,14 +53,30 @@ public class TestePet {
         pet.setRaca("baiacu");
         pet.setAnoNascimento(2015);
 
-        prop.getPets().add(pet);
+        prop.addPet(pet);
+        prop.listarPets();
 
-        for(Pet p : prop.getPets()) {
-            System.out.println(p);
-        }
+    }
+
+    // *********************************************************
+
+    public static void testaPetParaProprietarioBidirec() {
+        Proprietario prop = new Proprietario();
+        prop.setNome("Alysson");
+        prop.setTelefone("92 98801");
+        prop.setEmail("user@email.com");
+
+        // novo pet com parametros do construtor
+        Pet pet = new Pet("niko", prop, 2020,
+                "felino", "srd");
+
+        prop.addPet(pet);
+        prop.listarPets();
+
     }
 
     public static void main(String[] args) {
-        testaProprietarioParaPets();
+        // testaProprietarioParaPets();
+        testaPetParaProprietarioBidirec();
     }
 }

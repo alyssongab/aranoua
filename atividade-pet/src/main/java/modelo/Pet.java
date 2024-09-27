@@ -23,6 +23,7 @@ public class Pet {
 
     public void setProprietario(Proprietario proprietario) {
         this.proprietario = proprietario;
+        this.proprietario.addPet(this); // this = a classe Pet em si.
     }
 
     public int getAnoNascimento() {
@@ -104,7 +105,7 @@ public class Pet {
         return "\nPet{" +
                 "nome='" + nome + '\'' +
                 ", " + proprietarioInfo +
-                ", anoNascimento=" + anoNascimento +
+                ", idade=" + this.getIdade() +
                 ", especie='" + especie + '\'' +
                 ", raca='" + raca + '\'' +
                 '}';
