@@ -53,6 +53,7 @@ public class TestePet {
         pet.setRaca("baiacu");
         pet.setAnoNascimento(2015);
 
+        // Ao adicionar um pet ao ArrayList, o proprietário é também associado ao pet (bidirecional)
         prop.addPet(pet);
         prop.listarPets();
 
