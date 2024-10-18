@@ -2,8 +2,10 @@ package modelo;
 
 public class Funcionario extends Pessoa{
 
+    // Atributo específico
     private String dataAdmissao;
 
+    // Construtores
     public Funcionario() {
     }
 
@@ -20,6 +22,7 @@ public class Funcionario extends Pessoa{
         this.dataAdmissao = dataAdmissao;
     }
 
+    // Método validacao implementado
     @Override
     public boolean validacao() {
         return documento.toCharArray()[0] == '2';
@@ -28,10 +31,10 @@ public class Funcionario extends Pessoa{
     @Override
     public String toString() {
         return "Nome: "+getNome()+'\n'+
-        "Telefone: "+getTelefone()+'\n'+
-        "Email: "+getEmail()+'\n'+
-        "Data de admissão: "+getDataAdmissao()+'\n'+
-        "Carteira: " +getDocumento()+'\n'+
-        "Documento Validado: "+validacao();
+                "Telefone: "+getTelefone()+'\n'+
+                "Email: "+getEmail()+'\n'+
+                "Data de admissão: "+getDataAdmissao()+'\n'+
+                "Carteira: " +getDocumento()+'\n'+
+                "Documento Validado: "+validacao();
     }
 }

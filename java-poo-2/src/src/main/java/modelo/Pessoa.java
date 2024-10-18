@@ -53,18 +53,7 @@ public abstract class Pessoa {
         this.email = email;
     }
 
-    // Metodo para ser sobrescrito
-
-/*    public boolean validarDoc(String tipo) {
-        if (tipo.equalsIgnoreCase("fornecedor")) {
-            return documento.toCharArray()[0] == '1';
-        }
-        else if(tipo.equalsIgnoreCase("funcionario")) {
-            return documento.toCharArray()[0] == '2';
-        }
-        return false;
-    }*/
-
+    // Metodo para ser implementado
     public abstract boolean validacao();
 
 }

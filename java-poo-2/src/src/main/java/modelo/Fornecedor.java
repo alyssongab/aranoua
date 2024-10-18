@@ -2,8 +2,7 @@ package modelo;
 
 public class Fornecedor extends Pessoa {
 
-    // atributos
-
+    // Construtores
     public Fornecedor() {
     }
 
@@ -12,6 +11,7 @@ public class Fornecedor extends Pessoa {
 
     }
 
+    // Método validacao implementado
     @Override
     public boolean validacao() {
         return documento.toCharArray()[0] == '1';
