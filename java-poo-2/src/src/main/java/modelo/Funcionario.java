@@ -1,6 +1,6 @@
 package modelo;
 
-public class Funcionario extends Pessoa{
+public class Funcionario extends Pessoa implements EntidadeEnviaEmails, EntidadeEnviaSMS{
 
     // Atributo específico
     private String dataAdmissao;
@@ -30,11 +30,24 @@ public class Funcionario extends Pessoa{
 
     @Override
     public String toString() {
-        return "Nome: "+getNome()+'\n'+
-                "Telefone: "+getTelefone()+'\n'+
-                "Email: "+getEmail()+'\n'+
+        return super.toString() +
+                "CPF: " + getDocumento() + '\n'+
                 "Data de admissão: "+getDataAdmissao()+'\n'+
-                "Carteira: " +getDocumento()+'\n'+
                 "Documento Validado: "+validacao();
+    }
+
+    @Override
+    public String prepararConteudoEmail() {
+        return "Destinatário: " + this.getEmail() +
+                "\nPrezado " + this.getNome() +
+                "\nObrigado por sua colaboração em nossa empresa!";
+
+    }
+
+    @Override
+    public String prepararSMS() {
+        return "Destinatário: " + this.getTelefone() +
+                "\nPrezado " + this.getNome() +
+                "\nNotificação automática por SMS";
     }
 }

@@ -1,6 +1,6 @@
 package modelo;
 
-public class Fornecedor extends Pessoa {
+public class Fornecedor extends Pessoa implements EntidadeEnviaEmails{
 
     // Construtores
     public Fornecedor() {
@@ -19,10 +19,15 @@ public class Fornecedor extends Pessoa {
 
     @Override
     public String toString() {
-        return "Nome: "+getNome()+'\n'+
-                "Telefone: "+getTelefone()+'\n'+
-                "Email: "+getEmail()+'\n'+
-                "CNPJ: "+getDocumento()+'\n'+
+        return super.toString() +
+                "CNPJ: " + getDocumento() + '\n'+
                 "Documento Validado: "+validacao();
+    }
+
+    @Override
+    public String prepararConteudoEmail() {
+        return "Destinatário: " + this.getEmail() +
+                "\nCaro " + this.getNome() +
+                "\nCom intuito de termos os melhores preços, gostaríamos de negociar com a empresa!";
     }
 }

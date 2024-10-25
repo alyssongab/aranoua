@@ -56,4 +56,10 @@ public abstract class Pessoa {
     // Metodo para ser implementado
     public abstract boolean validacao();
 
+    @Override
+    public String toString() {
+        return "Nome: "+getNome()+'\n'+
+                "Telefone: "+getTelefone()+'\n'+
+                "Email: "+getEmail()+'\n';
+    }
 }

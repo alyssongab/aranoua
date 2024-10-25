@@ -24,8 +24,7 @@ public class TestaValidacoes {
         ArrayList<Pessoa> fornecedores = new ArrayList<>();
 
         // Funcionarios
-        funcionarios.add(new Funcionario("funcionario01", "92999", "func@gmail.com",
-                "01/10/2024", "12345"));
+        funcionarios.add(new Funcionario("funcionario01", "92999", "func@gmail.com", "01/10/2024", "12345"));
         funcionarios.add(new Funcionario("funcionario02", "928866", "func2@gmail.com", "03/10/2024", "2314"));
 
        // Fornecedores
