@@ -9,8 +9,10 @@ public class Cidade {
     private Estado estado;
 
     // construtor
-    public Cidade(String nome) {
+    public Cidade(String nome, Estado estado) {
         this.nome = nome;
+        this.estado = estado;
+        estado.adicionarCidade(this);
     }
 
     // getters

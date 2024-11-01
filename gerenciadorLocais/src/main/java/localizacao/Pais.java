@@ -9,6 +9,7 @@ public class Pais {
     private String nome;
     private List<Estado> estados;
 
+    // construtor
     public Pais(String nome) {
         this.nome = nome;
         this.estados = new ArrayList<Estado>(); // a lista de estados é iniciada
@@ -27,4 +28,5 @@ public class Pais {
     public void adicionarEstado(Estado estado) {
         estados.add(estado);
     }
+
 }

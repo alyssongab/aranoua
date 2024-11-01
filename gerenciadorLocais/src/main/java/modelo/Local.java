@@ -27,6 +27,7 @@ public class Local {
         this.cidade = cidade;
         this.zona = zona;
         this.avaliacoes = new ArrayList<>();
+        zona.adicionarLocal(this);
     }
 
     public Local(String nome, String endereco, Pais pais, Estado estado, Cidade cidade, Zona zona) {
@@ -89,7 +90,7 @@ public class Local {
         this.zona = zona;
     }
 
-    // outros metodos
+    // metodo de adicionar avaliacao ao local
 
     public void adicionarAvaliacao(Avaliacao avaliacao) {
         this.avaliacoes.add(avaliacao);
@@ -108,6 +109,4 @@ public class Local {
             System.out.println("Estrelas: " + avaliacao.getEstrelas() + " - Comentário: " + avaliacao.getComentarios());
         }
     }
-
-
 }

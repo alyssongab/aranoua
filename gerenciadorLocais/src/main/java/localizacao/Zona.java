@@ -17,6 +17,10 @@ public class Zona {
         this.locais = new ArrayList<>();
     }
 
+    public List<Local> getLocais() {
+        return locais;
+    }
+
     // opcional
     public void adicionarLocal(Local local) {
         this.locais.add(local);
