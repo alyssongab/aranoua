@@ -17,20 +17,6 @@ public class Main {
         Zona centro = new Zona("Centro");
         Zona pontaNegra = new Zona("Ponta negra");
 
-        // Verificação das relações
-        System.out.println("País: " + brasil.getNome());
-        System.out.println("Estados no país: ");
-        for (Estado estado : brasil.getEstados()) {
-            System.out.println(" - " + estado.getNome());
-        }
-
-        System.out.println("Estado: " + amazonas.getNome());
-        System.out.println("Cidades no estado: ");
-        for (Cidade cidade : amazonas.getCidade()) {
-            System.out.println(" - " + cidade.getNome());
-        }
-        System.out.println("-------------------------------------------------");
-
         /*------------ USUARIO 1 -----------*/
         Usuario user1  = new Usuario("Alysson", "user01");
         Local teatro = new Local("Teatro Amazonas", brasil, amazonas, manaus, centro);
@@ -56,14 +42,29 @@ public class Main {
         System.out.println("Nome: " + user1.getNome());
         System.out.println("Tipo de pessoa: " + user1.getTipoPessoa());
 
-        testarZonas(centro);
+//        testarZonas(centro);
+//        testarRelacoes(brasil, amazonas);
 
     }
 
     public static void testarZonas(Zona zona) {
-        System.out.println("Locais visitados na zona: " + zona);
+        System.out.println("Locais visitados na zona: " + zona.getNome());
         for(Local l : zona.getLocais()) {
             System.out.println(l.getNome());
+        }
+    }
+
+    public static void testarRelacoes(Pais pais, Estado estado) {
+        System.out.println("País: " + pais.getNome());
+        System.out.println("Estados no país: ");
+        for (Estado e : pais.getEstados()) {
+            System.out.println(" - " + estado.getNome());
+        }
+
+        System.out.println("Estado: " + estado.getNome());
+        System.out.println("Cidades no estado: ");
+        for (Cidade cidade : estado.getCidade()) {
+            System.out.println(" - " + cidade.getNome());
         }
     }
 }

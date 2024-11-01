@@ -21,6 +21,10 @@ public class Zona {
         return locais;
     }
 
+    public String getNome() {
+        return this.nome;
+    }
+
     // opcional
     public void adicionarLocal(Local local) {
         this.locais.add(local);

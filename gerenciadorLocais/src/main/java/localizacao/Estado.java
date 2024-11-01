@@ -16,8 +16,8 @@ public class Estado {
     public Estado(String nome, Pais pais) {
         this.nome = nome;
         this.pais = pais;
-        this.cidades = new ArrayList<Cidade>();
         pais.adicionarEstado(this);
+        this.cidades = new ArrayList<>();
     }
 
     // getters
