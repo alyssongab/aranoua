@@ -1,9 +1,6 @@
 package edu.ifam;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class TestaConexaoBD {
     public static void main(String[] args) {
@@ -18,14 +15,34 @@ public class TestaConexaoBD {
 
             Statement instrucao  = conexao.createStatement();
 
-            String sql = "insert into pessoa2" +
+            String sqlInserir = "insert into pessoa2" +
                         " (nome, email)" +
                         " values" +
                         " ('Joao', 'joao@gmail.com')";
 
-            System.out.println("SQL: " + sql);
+            String sqlAlterar = "update pessoa2" +
+                                " set nome = 'Jorge'" +
+                                " where id = 2";
 
-            boolean resultado = instrucao.execute(sql);
+            String sqlDeletar = "delete from pessoa2" +
+                                " where id = 2";
+
+            String sqlListar = "select id, nome, email from pessoa2";
+
+            System.out.println("SQL: " + sqlListar);
+            instrucao.execute(sqlListar);
+            boolean resultado = instrucao.execute(sqlListar);
+
+            if(resultado) {
+                ResultSet resultados = instrucao.getResultSet();
+                while(resultados.next()) {
+                    System.out.println("Id: "+resultados.getInt(1));
+                    System.out.println("Nome: "+resultados.getString(2));
+                    System.out.println("Email: "+resultados.getString(3));
+                    System.out.println("#############################################");
+                }
+            }
+
             System.out.println("Instrução realizada com sucesso");
         }
         catch(SQLException e){
