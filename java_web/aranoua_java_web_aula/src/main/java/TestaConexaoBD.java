@@ -6,28 +6,31 @@ public class TestaConexaoBD {
     public static void main(String[] args) {
 
         try{
-            ConexaoUtil conn = new ConexaoUtil();
-            Connection conexao = conn.getConexao();
+
+            Pessoa pessoa = new Pessoa("Pessoa 05", "pessoa5@ifam.edu.br", 6);
+
+            Connection conexao = DriverManager.getConnection(url, user, password);
+            System.out.println("Conexao realizada");
 
             Statement instrucao  = conexao.createStatement();
 
             String sqlInserir = "insert into pessoa2" +
                         " (nome, email)" +
                         " values" +
-                        " ('Joao', 'joao@gmail.com')";
+                        " ('"+pessoa.getNome()+"','"+pessoa.getEmail()+"')";
 
             String sqlAlterar = "update pessoa2" +
-                                " set nome = 'Jorge'" +
-                                " where id = 2";
+                                " set nome = '"+pessoa.getNome()+"'" +
+                                " where id = "+pessoa.getId();
 
             String sqlDeletar = "delete from pessoa2" +
                                 " where id = 2";
 
             String sqlListar = "select id, nome, email from pessoa2";
 
-            System.out.println("SQL: " + sqlListar);
-            instrucao.execute(sqlListar);
-            boolean resultado = instrucao.execute(sqlListar);
+            System.out.println("SQL: " + sqlInserir);
+            instrucao.execute(sqlInserir);
+            boolean resultado = instrucao.execute(sqlInserir);
 
             if(resultado) {
                 ResultSet resultados = instrucao.getResultSet();
