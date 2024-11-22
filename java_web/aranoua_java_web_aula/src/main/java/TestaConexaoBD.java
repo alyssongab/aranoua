@@ -1,17 +1,13 @@
-package edu.ifam;
+import util.ConexaoUtil;
 
 import java.sql.*;
 
 public class TestaConexaoBD {
     public static void main(String[] args) {
 
-        String url = "jdbc:mysql://localhost:3306/aranoua_java_web";
-        String user = "root";
-        String password = "4341";
-
         try{
-            Connection conexao = DriverManager.getConnection(url, user, password);
-            System.out.println("Conexao realizada");
+            ConexaoUtil conn = new ConexaoUtil();
+            Connection conexao = conn.getConexao();
 
             Statement instrucao  = conexao.createStatement();
 
