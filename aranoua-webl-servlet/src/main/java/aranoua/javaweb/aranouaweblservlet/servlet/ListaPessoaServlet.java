@@ -1,5 +1,6 @@
 package aranoua.javaweb.aranouaweblservlet.servlet;
 
+import aranoua.javaweb.aranouaweblservlet.dao.PessoaDAO;
 import aranoua.javaweb.aranouaweblservlet.model.Pessoa;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -9,17 +10,30 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "listaPessoaServlet", value = "/lista-pessoas")
 public class ListaPessoaServlet extends HttpServlet {
 
+
     private List<Pessoa> pessoas = new ArrayList<>();
+
     private void carregarPessoas() {
-        pessoas.add(new Pessoa("Alysson", "0355", "alysson@gmail.com", "Manaus"));
-        pessoas.add(new Pessoa("Gabriel", "2323", "gabriel@gmail.com", "Curitiba"));
-        pessoas.add(new Pessoa("Joao", "1235", "joao@gmail.com", "Rio de janeiro"));
+//        pessoas.add(new Pessoa("Alysson", "0355", "alysson@gmail.com", "Manaus"));
+//        pessoas.add(new Pessoa("Gabriel", "2323", "gabriel@gmail.com", "Curitiba"));
+//        pessoas.add(new Pessoa("Joao", "1235", "joao@gmail.com", "Rio de janeiro"));
+
+        PessoaDAO pessoaDao = new PessoaDAO();
+        try {
+
+            this.pessoas = pessoaDao.listar();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     @Override
@@ -52,9 +66,7 @@ public class ListaPessoaServlet extends HttpServlet {
                     for(Pessoa p : pessoas) { // adiciona dinamicamente as linhas conforme tenha pessoas na lista
                         out.println("<tr>");
                             out.println("<td>" + p.getNome() + "</td>");
-                            out.println("<td>" + p.getCpf() + "</td>");
                             out.println("<td>" + p.getEmail() + "</td>");
-                            out.println("<td>" + p.getCidade() + "</td>");
                         out.println("</tr>");
                     }
                 out.println("</table>");

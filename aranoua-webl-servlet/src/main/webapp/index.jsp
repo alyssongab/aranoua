@@ -8,6 +8,6 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="http://localhost:8080/aranoua_webl_servlet_war_exploded/lista-pessoas">Hello Servlet</a>
 </body>
 </html>

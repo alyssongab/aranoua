@@ -2,15 +2,17 @@ package aranoua.javaweb.aranouaweblservlet.model;
 
 public class Pessoa {
     private String nome;
-    private String cpf;
+//    private String cpf;
     private String email;
-    private String cidade;
+    private int id;
 
-    public Pessoa(String nome, String cpf, String email , String cidade) {
+    public Pessoa() {
+
+    }
+
+    public Pessoa(String nome,String email){
         this.nome = nome;
-        this.cpf = cpf;
         this.email = email;
-        this.cidade = cidade;
     }
 
     public String getNome() {
@@ -21,14 +23,6 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -37,19 +31,18 @@ public class Pessoa {
         this.email = email;
     }
 
-    public String getCidade() {
-        return cidade;
+    public int getId() {
+        return id;
     }
 
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
         return "Pessoa{" +
                 "nome='" + nome + '\'' +
-                ", cpf='" + cpf + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }
