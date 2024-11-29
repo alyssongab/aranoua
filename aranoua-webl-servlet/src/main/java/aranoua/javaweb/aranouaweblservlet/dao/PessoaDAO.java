@@ -39,7 +39,7 @@ public class PessoaDAO {
 
         Statement instrucao  = con.createStatement();
 
-        String sql = "update pessoa " +
+        String sql = "update pessoa2 " +
                 " set nome = '"+p.getNome()+"',"+
                 "     email = '"+p.getEmail()+"'"+
                 " where id = "+p.getId();

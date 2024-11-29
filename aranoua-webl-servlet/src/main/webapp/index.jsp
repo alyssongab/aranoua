@@ -9,5 +9,6 @@
 </h1>
 <br/>
 <a href="http://localhost:8080/aranoua_webl_servlet_war_exploded/lista-pessoas">Hello Servlet</a>
+<a href="pessoa">Gerencia pessoas</a>
 </body>
 </html>

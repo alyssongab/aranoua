@@ -57,10 +57,9 @@ public class ListaPessoaServlet extends HttpServlet {
 
                 out.println("<table border = \"1\"");
                     out.println("<tr>"); // linha do cabeçalho
+                        out.println("<th>ID</th>");
                         out.println("<th>Nome</th>");
-                        out.println("<th>Cpf</th>");
                         out.println("<th>Email</th>");
-                        out.println("<th>Cidade</th>");
                     out.println("</tr>");
 
                     for(Pessoa p : pessoas) { // adiciona dinamicamente as linhas conforme tenha pessoas na lista
