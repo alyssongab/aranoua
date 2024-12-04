@@ -15,7 +15,7 @@ public class ConexaoUtil {
 
         this.url = "jdbc:mysql://localhost:3306/aranoua_java_web";
         this.usuario = "root";
-        this.senha = "4341";
+        this.senha = "Aly@4341";
 
     }
 

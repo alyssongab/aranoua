@@ -31,7 +31,7 @@ public class PessoaServlet extends HttpServlet {
                     consultarPessoa(req, resp); break;
                 case "excluir":
                     excluirPessoa(req, resp); break;
-                default: listarPessoa(req, resp);
+                default: listarPessoa(req, resp); // página default
             }
         }
         catch(Exception e){
