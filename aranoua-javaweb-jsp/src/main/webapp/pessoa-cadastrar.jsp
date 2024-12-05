@@ -16,6 +16,7 @@
     <%
        String cadastrar = request.getParameter("cadastrar");
        String mensagem = "";
+       boolean cadastroConcluido = false;
 
        if(cadastrar != null){
 
@@ -28,6 +29,7 @@
                PessoaDAO pessoaDAO = new PessoaDAO();
                pessoaDAO.inserir(pessoa);
                mensagem = "Dados salvos com sucesso!";
+               cadastroConcluido = true;
            }
            catch(Exception e){
                mensagem = "Erro ao salvar!";
@@ -35,11 +37,18 @@
        }
 
     %>
-
-    <h1>Cadastrar Pessoa</h1>
-
+    <h1>Cadastro de pessoa</h1>
+    <%
+        if(cadastroConcluido) {
+    %>
     <strong><%=mensagem%></strong>
+    <br>
+    <a href="pessoa-listar.jsp">Voltar</a>
 
+    <%
+        } else {
+    %>
+    <strong><%=mensagem%></strong>
     <form action="pessoa-cadastrar.jsp" method="post">
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" required>
@@ -52,5 +61,8 @@
         <button type="reset">Resetar</button>
         <a href="pessoa-listar.jsp">Voltar</a>
     </form>
+    <%
+        }
+    %>
 </body>
 </html>
